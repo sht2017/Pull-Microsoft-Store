@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "he": "^1.2.0",
+    "node-fetch": "^3.3.2",
+    "xmldom": "^0.6.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "ncc build src/index.js -o dist",
+    "full-build": "npm run clean && npm run build",
+    "prepublishOnly": "npm run build"
+  }
+}

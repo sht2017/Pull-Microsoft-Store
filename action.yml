@@ -1,0 +1,18 @@
+name: 'Pull MSIX from Microsoft Store'
+description: 'Pull MSIX packages from Microsoft Store to local.'
+branding:
+  icon: git-pull-request
+  color: blue
+inputs:
+  product-id:
+    description:
+      'Product ID for pulling'
+    required: true
+  output-path:
+    description:
+        'Path to save the MSIX packages. Defaults to current directory.'
+    required: false
+    default: '.'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
